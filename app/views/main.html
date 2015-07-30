@@ -1,0 +1,44 @@
+<legend>
+	0 = Equivale a la posición 1 <br>
+	1 = Equivale a la posicion 2 <br>
+	2 = Equivale a la posición 3 <br>
+
+	Los demas valores siguiendo esta secuencia.
+	<hr>
+</legend>
+
+<div class="Matriz3D">
+	<div id="initialize">
+		<label for="3d">Dimensión matriz 3D:</label>
+		 <input id="3d" type="text"  placeholder="Ingresar solo números" ng-model="dimension" class="form-control">
+		 <span>
+		    <button class="btn btn-summary" ng-click="newMatriz()" style="width: 200px;
+		    height: 40px;">Generar matriz dimensiones</button>
+		 </span>
+	</div>
+	<div id="Update" style="margin: 20px 0 0 0;">
+		<label for="3d">Update coordenada EJ: un solo valro sera tomado como (n,n,n):</label>
+		 <input id="3d" type="text"  placeholder="Coordenada a cambiar" ng-model="cordenada" class="form-control" style="width: 180px;display: inline-table;">
+		 <input id="3d" type="text"  placeholder="Valor x coordenada" ng-model="value" class="form-control" style="width: 180px;display: inline-table;">
+		 <span>
+		    <button class="btn btn-summary" ng-click="updateMatriz()" style="width: 200px;
+		    height: 40px;">Generar update matriz</button>
+		 </span>
+	</div>
+	<div id="Suma" style="margin: 20px 0 0 0;">
+		<label for="3d">Sumar coordenadas:</label>
+		 <input id="3d" type="text"  placeholder="Coordenada inicial" ng-model="init" class="form-control" style="width: 180px;display: inline-table;">
+		 <input id="3d" type="text"  placeholder="Coordenada Final" ng-model="end" class="form-control" style="width: 180px;display: inline-table;">
+		 <span>
+		    <button class="btn btn-summary" ng-click="sumDatos()" style="width: 200px;
+		    height: 40px;">Sumar matriz</button>
+		 </span>
+	</div>
+	<div id="result" style="font-size: 50px;">
+		{{newArray}}
+	</div>
+	<div id="sumatoria">
+		{{sumatoria}}
+	</div>
+</div>
+
