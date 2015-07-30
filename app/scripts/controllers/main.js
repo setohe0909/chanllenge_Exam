@@ -24,4 +24,9 @@ angular.module('challengeApp')
 	    } else return 0;
     	return $scope.arr = matriz;
     };
+    $scope.updateMatriz = function(){
+    	for (var iMat = 0; updateArray.length > iMat; iMat++)
+		    updateArray[iMat][index] += value;
+		return $scope.arr = updateArray;
+    };
   });
