@@ -29,4 +29,27 @@ angular.module('challengeApp')
 		    updateArray[iMat][index] += value;
 		return $scope.arr = updateArray;
     };
+    $scope.sumDatos = function(){
+    	var sum = 0;
+    	var updateArray = $scope.arr;
+
+    	for (var iMat = 0; updateArray.length > iMat; iMat++){
+    		if (updateArray[iMat][index] > 0)
+		    	sum += updateArray[iMat][index];
+    	}
+
+		return $scope.sumatoria = sum;
+    };
+    $scope.sumDatoscord = function(){
+    	var total = 0;
+        var init = parseInt($scope.init);
+    	var end = parseInt($scope.end);
+
+    	for (var iMat = 0; updateArray.length > iMat; iMat++){
+    		if (updateArray[iMat][init] > 0)
+    			sum += updateArray[iMat][init] + updateArray[iMat][end];
+    	}
+
+		return $scope.sumatoria = sum;
+    }
   });
